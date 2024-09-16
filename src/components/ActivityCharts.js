@@ -1,11 +1,11 @@
-import React from 'react'; // Correct import for React
-import activity from './'; // Ensure the correct path to your image file
+import React from 'react';
+// import { ReactComponent as Activity } from '../activity.svg';
 
 function ActivityCharts() {
   return (
     <div className='Activity-container'>
       <h1>Activity</h1>
-      <img src={activity} alt="Activity Chart" /> {/* Use the image variable properly */}
+      {/* <Activity /> Render SVG as a React component */}
     </div>
   );
 }

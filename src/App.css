@@ -1,78 +1,31 @@
-/* .App {
-  text-align: center;
-} */
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+}
+
 .container {
-  background-color: cornflowerblue;
-  /* margin: 20px; */
-  /* display: flex; */
-  /* width: 500%;
-  height: 100vh; */
-}
-
-.Header-container {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw;  /* Full width of the viewport */
 }
 
-.Icons {
-  display: flex;
-  align-items: center;
-
-  & > * {
-    margin-left: 20px;
-    cursor: pointer;
-  }
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
-
-/* :hover .Icons {
-  background-color: aqua;
-} */
 
 .Searchbar {
   padding: 10px;
   border-radius: 5px;
   border: none;
+  width: 300px; /* Make the search bar larger */
+  font-size: 16px; /* Adjust font size for better readability */
 }
 
 .sidebar-container {
@@ -83,18 +36,31 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
-}
-
-.Icons {
-  margin: 20px 0;
-  cursor: pointer;
+  position: fixed; /* Keep the sidebar fixed */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh; /* Full height of the viewport */
+  z-index: 1; /* Ensure it stays on top of other content */
 }
 
 .MainContent-Container {
+  flex-grow: 1;
+  margin-left: 80px; /* Offset the main content to the right of the sidebar */
   padding: 20px;
   background-color: #111;
   color: #fff;
   min-height: 100vh;
+  overflow-y: auto; /* Enable scrolling if the content is taller than the screen */
+}
+
+.Header-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
 }
 
 .Summary-divs {
@@ -109,6 +75,9 @@
   border-radius: 10px;
   flex: 1;
   margin: 0 10px;
+}
+.Icons {
+  padding: 30px;
 }
 
 .Activity-container {
